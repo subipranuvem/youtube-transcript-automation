@@ -49,10 +49,7 @@ Se quiser limpar tudo ao desligar:
  docker compose down --volumes
 ```
 
-Aqui está a versão melhorada do seu conteúdo em Markdown, com formatação aprimorada, mais clareza e correção de detalhes técnicos:  
-
-```md
-# API em Python para Transcrição de Vídeos do YouTube
+## API em Python para Transcrição de Vídeos do YouTube
 
 Este repositório contém uma API desenvolvida em Python que obtém a transcrição de um vídeo do YouTube a partir de uma URL ou ID do vídeo.
 
