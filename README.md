@@ -49,18 +49,75 @@ Se quiser limpar tudo ao desligar:
  docker compose down --volumes
 ```
 
-## API em Python
+Aqui está a versão melhorada do seu conteúdo em Markdown, com formatação aprimorada, mais clareza e correção de detalhes técnicos:  
 
-Esse repositório conta com uma API em Python para obter a transcrição de um vídeo do YouTube dado uma URL ou um ID do vídeo.
+```md
+# API em Python para Transcrição de Vídeos do YouTube
 
-Para acessar a documentação, acesse:
+Este repositório contém uma API desenvolvida em Python que obtém a transcrição de um vídeo do YouTube a partir de uma URL ou ID do vídeo.
 
-👉 http://localhost:8001/docs
+## 📖 Documentação  
 
-### Exemplo
+Acesse a documentação interativa via Swagger:  
 
-Você pode chamar a API usando esse comando abaixo no terminal:
+👉 [http://localhost:8001/docs](http://localhost:8001/docs)  
+
+---
+
+## 🚀 Exemplo de Uso  
+
+Você pode chamar a API usando o seguinte comando no terminal:
 
 ```sh
-curl http://localhost:8000/youtube/transcript\?video_id\=9Dzttt1sCuM
+curl "http://localhost:8000/youtube/transcript?video_id=9Dzttt1sCuM"
+```
+
+---
+
+## ⚙️ Rodando a API Localmente  
+
+### 1. Criar um ambiente virtual  
+
+```sh
+python -m venv .venv
+```
+
+### 2. Ativar o ambiente virtual  
+
+- **Linux/macOS**:  
+  ```sh
+  source .venv/bin/activate
+  ```
+- **Windows** (PowerShell):  
+  ```sh
+  .venv\Scripts\Activate
+  ```
+
+### 3. Instalar o Poetry  
+
+Se ainda não tiver o Poetry instalado, siga as instruções: [Guia de Instalação do Poetry](https://python-poetry.org/docs/#installation)
+
+### 4. Instalar dependências  
+
+```sh
+poetry install
+```
+
+### 5. Iniciar a API  
+
+```sh
+python app.py
+```
+
+
+## ⚠️ Configuração da Porta  
+
+Por padrão, a API roda:  
+- Na **porta 8000** quando executada localmente.  
+- Na **porta 8001** quando executada via Docker.  
+
+Se desejar alterar a porta, edite o arquivo `.env` e adicione:
+
+```sh
+PORT=9000
 ```
