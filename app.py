@@ -124,7 +124,7 @@ async def get_transcript(
 
         return TranscriptResponse(
             transcription=transcript_text,
-            language=transcript.language.replace("(auto-generated)", ""),
+            language=transcript.language.replace("(auto-generated)", "").strip(),
             language_code=transcript.language_code,
             is_generated=transcript.is_generated,
         )
