@@ -1,5 +1,7 @@
 # Youtube Transcript N8N Example
 
+API em Python para Transcrição de Vídeos do YouTube que é utilizado como uma _Tool_ em um agente de IA no N8N.
+
 ## Requisitos
 
 Antes de começar, você precisa instalar alguns programas:
@@ -49,7 +51,7 @@ Se quiser limpar tudo ao desligar:
  docker compose down --volumes
 ```
 
-## API em Python para Transcrição de Vídeos do YouTube
+# API em Python para Transcrição de Vídeos do YouTube
 
 Este repositório contém uma API desenvolvida em Python que obtém a transcrição de um vídeo do YouTube a partir de uma URL ou ID do vídeo.
 
@@ -71,7 +73,9 @@ curl "http://localhost:8000/youtube/transcript?video_id=9Dzttt1sCuM"
 
 ---
 
-## ⚙️ Rodando a API Localmente  
+## ⚙️ Rodando a API Localmente sem utilizar Docker (Opcional)
+
+Por padrão a API roda em um container quando o comando docker é executado. Mas, se você quiser rodar a API localmente, sem utilizar o Docker, abaixo seguem as instruções.
 
 ### 1. Criar um ambiente virtual  
 
@@ -117,4 +121,20 @@ Se desejar alterar a porta, edite o arquivo `.env` e adicione:
 
 ```sh
 PORT=9000
+```
+
+## Subindo a imagem para o Docker Hub ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+A [imagem da API](https://hub.docker.com/r/subipranuvem/youtube_transcript_api) foi armazenada no Docker Hub para que seja possível que outras pessoas a reutilizem.
+
+Para subir a imagem para o Docker Hub, primeiro, logue no DockerHub subistituindo o `{usuario_docker_hub}` pelo seu usuário:
+
+```sh
+docker build -t {usuario_docker_hub}/youtube_transcript_api . && docker push {usuario_docker_hub}/youtube_transcript_api
+```
+
+Em seguida execute esse comando:
+
+```sh
+docker build -t {usuario_docker_hub}/youtube_transcript_api . && docker push subipranuvem/youtube_transcript_api
 ```
