@@ -2,6 +2,12 @@
 
 API em Python para Transcrição de Vídeos do YouTube que é utilizado como uma _Tool_ em um agente de IA no N8N.
 
+## Guia em Vídeo
+
+Gravamos um vídeo para te guiar no processo. Assista aqui: [INSERIR LINK DO VÍDEO].
+
+⚠️ **Recomendamos que você se guie pelo vídeo!**
+
 ## Requisitos
 
 Antes de começar, você precisa instalar alguns programas:
@@ -16,9 +22,12 @@ Antes de começar, você precisa instalar alguns programas:
 - Se ainda não tem uma chave, crie uma aqui: https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br
 - Se já tem uma chave, acesse-a aqui: https://aistudio.google.com/app/apikey
 
-## Guia em Vídeo
+## Import do workflow no N8N
 
-Gravamos um vídeo para te guiar no processo. Assista aqui: [INSERIR LINK DO VÍDEO].
+Será necessário importar o fluxo do N8N disponível no arquivo [workflows/Youtube_Summary.json](workflows/Youtube_Summary.json).
+
+Caso necessário, veja a [documentação de importação e exportação de workflows no N8N](https://docs.n8n.io/courses/level-one/chapter-6/#exporting-and-importing-workflows_1).
+
 
 ## Por que rodar o N8N localmente?
 
@@ -46,10 +55,13 @@ Caso precise desligar as dependências, use:
 ```
 
 ### Para parar as dependências e apagar os dados salvos
-Se quiser limpar tudo ao desligar:
+Se quiser remover todos os dados ao desligar:
 ```sh
  docker compose down --volumes
 ```
+
+> ⚠️ Caso você tenha o [Docker Desktop](https://docs.docker.com/desktop/) instalado em sua máquina, você pode parar ou remover os containers pela interface gráfica.
+
 
 # API em Python para Transcrição de Vídeos do YouTube
 
