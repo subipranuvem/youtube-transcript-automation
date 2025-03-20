@@ -7,7 +7,6 @@ services:
   postgres:
     container_name: n8n-postgres
     image: postgres:16
-    restart: always
     environment:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
@@ -49,7 +48,6 @@ services:
   n8n:
     image: docker.n8n.io/n8nio/n8n
     container_name: n8n
-    restart: always
     environment:
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=postgres
