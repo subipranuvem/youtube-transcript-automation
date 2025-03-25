@@ -4,7 +4,9 @@ API em Python para Transcrição de Vídeos do YouTube que é utilizado como uma
 
 ## Guia em Vídeo
 
-Gravamos um vídeo para te guiar no processo. Assista aqui: [INSERIR LINK DO VÍDEO].
+Gravamos um vídeo para te guiar no processo.
+
+Assista aqui: https://www.youtube.com/watch?v=HGaYaZaiW10.
 
 ⚠️ **Recomendamos que você se guie pelo vídeo!**
 
@@ -63,7 +65,7 @@ Se quiser remover todos os dados ao desligar:
 > ⚠️ Caso você tenha o [Docker Desktop](https://docs.docker.com/desktop/) instalado em sua máquina, você pode parar ou remover os containers pela interface gráfica.
 
 
-# API em Python para Transcrição de Vídeos do YouTube
+# API em Python para Transcrição de Vídeos do YouTube - Para desenvolvedores
 
 Este repositório contém uma API desenvolvida em Python que obtém a transcrição de um vídeo do YouTube a partir de uma URL ou ID do vídeo.
 
