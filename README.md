@@ -44,7 +44,7 @@ Depois que o N8N estiver rodando, abra seu navegador e acesse:
 ### Para iniciar as dependências do projeto
 Abra o terminal (ou PowerShell no Windows), vá até a pasta do projeto e execute:
 ```sh
- docker compose up -d
+ docker compose up -d --build
 ```
 Isso inicia as dependências em segundo plano (se você fechar o terminal ou PowerShell, as dependências ainda continuarão executando).
 
